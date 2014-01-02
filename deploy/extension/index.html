@@ -1,0 +1,158 @@
+<html> 
+<head> 
+ 	<meta charset="utf-8"> 
+    <meta name="description" content="迅雷云播是迅雷公司推出的BT种子、视频下载链接在线快速播放的服务，有BT种子、视频下载链接即可快速播放，支持多浏览器、苹果和安卓系统、ipad等移动设备"> 
+    <meta name="keywords" content="云点播 云播放 视频 在线 免下载 播放 看看播放器 迅雷 免费 离线下载 迅雷客户端 快速播放 BT种子 下载链接 转码 iphone ipad 安卓 破解版"> 
+    <title>迅雷云播</title> 
+	<link href="http://vod.xunlei.com/page/extension/css/style_2.9.css?v=1.0.01" rel="stylesheet" type="text/css" /> 
+	<style type="text/css"> 
+	.container{background:#fff;height:457px;min-height:457px;} 
+	</style> 
+	<script type="text/javascript">  
+	if(typeof console == "undefined"){ 
+		console = {}; 
+		console.log = function(){}; 
+	} 
+	console.log('index.html')  
+	</script> 
+</head> 
+<body> 
+	<div style="width:100%;height:45px;background:url(http://vod.xunlei.com/page/extension/img/ybx_hd.png) no-repeat -1px 0;"> 
+	</div> 
+	<div class="container" style="position:relative;"> 
+		<div id="loginLayer" class="ybw_bd" style="display:none"> 
+			<a id="closeLayerBtn" class="cls" href="javascript:;" title="关闭登录浮层">关闭登录浮层</a> 
+		    <div class="yblog_bd clearfix"> 
+		      <div class="fl"> 
+		        <h2>云播简介</h2> 
+		        <p>· 快速播放视频下载链接、BT种子</p> 
+		        <p>· 云列表可保存任务1000个以上</p> 
+		        <p>· 支持安卓、iOS等移动设备</p> 
+		      </div> 
+		      <div id="login_box" class="fr"> 
+		        <p class="tit">迅雷用户登录</p> 
+		        <p class="input"> 
+		          <span>帐号</span> 
+		          <input id="login_u" class="wrong" type="text" value=""> 
+		        </p> 
+		        <p class="input"> 
+		        	<span>密码</span> 
+		          	<input id="login_p" type="password" value=""> 
+		        </p> 
+		        <p class="input" id="login_vcode_p" style="display:none;"> 
+                    <input id="login_verifycode" type="text" name="" class="w80" value="验证码"> 
+                    <img id="login_verify_code" src="http://verify.xunlei.com/image?cachetime=1360058520337" alt="" style=""> 
+                    <a id="login_ref_verify" href="javascript:;" title="换一个">换一个</a> 
+                </p> 
+		        <p class="cbox"> 
+                    <span class="ins_rem1"><input id="login_auto" type="checkbox" name="" class="lc_cb1" checked="true"> 记住我</span> 
+                    <span class="ins_forg"><a href="http://aq.xunlei.com/?redirecturl=forgot_pwd" title="忘记帐号|密码" target="_blank">忘记帐号|密码</a></span> 
+                </p> 
+		        <p class="btnwp clearfix"> 
+			        <a id="login_submit" href="javascript:;" class="ico btn_log" title="登录">登录</a> 
+			        <a id="regInBox" href="javascript:;" title="快速注册">快速注册&gt;&gt;</a> 
+		        </p> 
+		      </div> 
+		    </div> 
+		</div> 
+		 
+		<div id="listLayer" class="yblist_bd" style="display:none;"> 
+			<div class="ybl_box"> 
+				<div class="ybl_box_tit"> 
+					<input id="selectAllCkbox" type="checkbox"> 
+					<div class="head_buttons"> 
+						<a name ="vod_play" class="ico btn_ybf" title="云播放" style="">云播放</a> 
+						<a name ="vod_add" class="ico btn_add" title="加入列表" style="">加入列表</a> 
+						<span name="vod_adding" class="ico ico_load" style="display:none;">正在加入…</span> 
+						<span name="vod_view_list" class="ico ico_chklt" title="查看列表" style="display:none;">查看列表</span> 
+						<a name ='vod_down' class="ico btn_dl" title="迅雷下载" style="">迅雷下载</a> 
+					</div> 
+					<select> 
+						<option>默认排序</option> 
+					</select> 
+					<a id='upsaidwnBtn' href="javascript:;" class="ico btn_sort" title="倒序"></a> 
+				</div> 
+				<div id="scrollWrapper" style="width:100%;height:360px;position:absolute;overflow:auto;"> 
+	       			<div id="listddContent" class="listitem"> 
+						<ul class="ybl_box_cont"> 
+						<li class="on"> 
+							<input type="checkbox"> 
+							<i class="vdtype vdxv"></i><span class="txt">黑衣人3中英双字幕DVD高清黑衣人3中英双字幕DVD高清720P.mkv</span><span class="data">65.88M</span><a class="ico ico_ybf_cur" title="云播放">云播放</a><a class="ico ico_add" title="加入列表">加入列表</a> 
+						</li> 
+						</ul> 
+				        <!-- 
+				        <dd> 
+				          <input type="checkbox"> 
+				          <i class="ico vdmov"></i> 
+				          <span class="txt">--</span> 
+				          <a class="ico ico_ybf" title="云播放">云播放</a> 
+				          <a class="ico ico_add" title="加入列表">加入列表</a> 
+				        </dd> 
+				        --> 
+		      		</div> 
+		      		</div> 
+		  		</div> 
+	      		<p id="selTip" style="position: absolute;top: 410px;left: 15px;"></p>  
+      			<p id="showMore" class="ltmore" style="position:relative;top:360px;height:65px;line-height: 55px;">  
+      				<a id="showMoreBtn" href="javascript:;" title="显示更多">显示更多</a>（<span>122</span>）  
+      			</p>  
+	  	</div> 
+ 
+	 	<div id="tipsLayer" class="yblist_bd" style="display:;"> 
+      		<p name="loading" class="pno" style="display:;">  
+      			<img  src="http://vod.xunlei.com/page/extension/img/loading.gif" alt=""/>正在努力查找视频下载资源...  
+      		</p>  
+      		<p name="notFound" class="pno" style="display:none;">  
+      			<img  src="http://vod.xunlei.com/page/extension/img/face01.jpg" alt=""/>当前页面没有找到支持云播放的视频下载资源…  
+      		</p>  
+      	</div> 
+      	<b id="failedTip" class="ico ltips" style="display:none"></b> 
+      	<a id="myVodListBtn" href="javascript:;" class="ico lk_mylist" title="查看我的云列表" style="display:none">查看我的云列表&gt;&gt;</a> 
+		<a id="scrollTopBtn" href="javascript:;" class="backtop" title="回到顶部" style="display:none;">回到顶部<i class="ico"></i></a> 
+	</div> 
+	<iframe id="proxy_i" name="proxy_i" src="http://i.vod.xunlei.com/proxy.html?v2.82" width="0" height="0" style="display:none;"></iframe> 
+</body> 
+<script src="http://vod.xunlei.com/page/extension/js/seajs/sea.js"></script> 
+<script type="text/javascript" id="__DataSourceScript__"></script> 
+<script> 
+    (function(){ 
+        var modConfig = {
+		    "entry": "app/index/1.0.0/index",
+		    "alias": {
+		        "index": "app/index/1.0.0/index"
+		    },
+		    "appRoot": "app/",
+		    "AppVer": "2.0.0.01",
+		    "PubVer": "01",
+		    "base": "http://vod.xunlei.com/page/extension/js/",
+		    "debug": false,
+		    "gCloudVod": {
+		        "runEnv": "online",
+		        "defStatLevel": 1,
+		        "AppVer": "2.0.0.01"
+		    }
+		}; 
+        // 定义全局变量 
+        window.gVodExt = modConfig.gCloudVod ? modConfig.gCloudVod : {}; 
+        // 当前页标识写入全局变量 
+        window.gVodExt.data = ''; 
+ 
+        var mapVer = function(str){ 
+            return str + "?" + ( str.indexOf('libaray') != -1 ? modConfig.PubVer : modConfig.AppVer) 
+        }; 
+ 
+        seajs.config({ 
+            base: modConfig.base, 
+            alias: modConfig.alias, 
+            preload: [ 
+                this.JSON ? '' : 'json' 
+            ], 
+            debug: modConfig.debug || 0, 
+            map:[ [/.*\.js$/, mapVer] ] 
+        }); 
+ 
+        // 加载入口模块 
+        seajs.use( modConfig.entry ); 
+    })(); 
+</script> 
+</html>
