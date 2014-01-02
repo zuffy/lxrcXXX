@@ -1,0 +1,2 @@
+media/vodPlayer_2.8.swf
+media/vodPlayer_trial.swf

@@ -1,0 +1,3 @@
+vod.front/config/diff/test/target/a.txt
+vod.front/config/diff/test/target/ab/a.txt
+vod.front/config/diff/test/target/d.txt
