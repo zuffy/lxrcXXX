@@ -2,7 +2,7 @@
 		
 	var gServerUrl = 'http://vod.xunlei.com/page/lxrc';
 	//var noCache = '?t='+(new Date().getTime());
-	var noCache = '?t=1';
+	var noCache = '?t=2';
 	
 	var config = {
 		showDatas:{},//用于显示的数据
