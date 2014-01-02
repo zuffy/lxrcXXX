@@ -271,7 +271,7 @@ define(function(require) {
 	}
 	
 	//php传来数据;
-	if(location.href.match(/(vod.xunlei.com|vod.xunlei.com\/page\/lxrc\/php)/)){
+	if(location.href.match(/(i.vod.xunlei.com|vod.xunlei.com\/page\/lxrc\/php)/)){
 		var dataObj = window.datas;
 		DataManager.init( dataObj );
 		DataManager.addCtrls( new PageManager() );
