@@ -1,0 +1,30 @@
+{
+   "manifest_version": 2,
+   "version": "1.0",
+   "name": "__MSG_extName__",
+   "default_locale": "zh_CN",
+   "description": "__MSG_extDescription__",
+   "homepage_url": "http://vod.xunlei.com",
+   "background": {
+      "page": "html/background.html"
+   },
+   "browser_action": {
+      "default_icon": "assets/19x19.png",
+      "default_title": "__MSG_actionTitle__"
+   },
+   "content_scripts": [ {
+      "js": [ "js/drag.js", "js/lib/thunder_tools.js",
+              "js/analyse.js",
+              "js/tools.js", "js/lib/json2.min.js", 
+              "js/lib/jquery-1.7.2.js", "js/contentScript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "icons": {
+      "128": "assets/128x128.png",
+      "16": "assets/16x16.png",
+      "48": "assets/48x48.png"
+   },
+   "permissions": ["contextMenus", "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://upext.chrome.360.cn/intf.php?method=ExtUpdate.query",
+   "web_accessible_resources": ["img/face01.gif","img/loading.gif","img/spr_ico.png","img/ybx_hd.png","js/contentScript.js" ]
+}

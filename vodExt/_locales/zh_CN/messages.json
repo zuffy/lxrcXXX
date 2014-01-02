@@ -1,0 +1,18 @@
+{
+   "actionTitle": {
+      "description": "按钮标题",
+      "message": "迅雷云播"
+   },
+   "extDescription": {
+      "description": "扩展描述",
+      "message": "快速检测当前页面的视频资源，免下载在线播放，也可以添加收藏到云列表以后再看"
+   },
+   "extName": {
+      "description": "扩展名称",
+      "message": "迅雷云播"
+   },
+   "pageMenu": {
+      "description": "扩展名称",
+      "message": "迅雷云播(检测)"
+   }
+}
